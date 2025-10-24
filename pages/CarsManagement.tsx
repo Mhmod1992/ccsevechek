@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { CarMake, CarModel } from '../types';
+import { useAppContext } from '../context/AppContext.tsx';
+import { CarMake, CarModel } from '../types.ts';
 import { v4 as uuidv4 } from 'uuid';
-import Modal from '../components/Modal';
-import Icon from '../components/Icon';
+import Modal from '../components/Modal.tsx';
+import Icon from '../components/Icon.tsx';
 
 const CarsManagement: React.FC = () => {
     const { carMakes, setCarMakes, carModels, setCarModels, showConfirmModal, addNotification } = useAppContext();

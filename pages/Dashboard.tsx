@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { useAppContext } from '../context/AppContext';
-import { RequestStatus } from '../types';
-import Icon from '../components/Icon';
+import { useAppContext } from '../context/AppContext.tsx';
+import { RequestStatus } from '../types.ts';
+import Icon from '../components/Icon.tsx';
 
 const StatCard: React.FC<{ title: string; value: number; icon: string; color: string }> = ({ title, value, icon, color }) => (
   <div className="bg-white p-6 rounded-xl shadow-lg flex items-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">

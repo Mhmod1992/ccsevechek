@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { useAppContext } from '../context/AppContext';
+import { useAppContext } from '../context/AppContext.tsx';
 import { v4 as uuidv4 } from 'uuid';
-import { Client, Car, CarMake, CarModel, WorkshopRequest, PaymentType, RequestStatus } from '../types';
-import Modal from '../components/Modal';
-import PrintDraft from '../components/PrintDraft';
-import Icon from '../components/Icon';
+import { Client, Car, CarMake, CarModel, WorkshopRequest, PaymentType, RequestStatus } from '../types.ts';
+import Modal from '../components/Modal.tsx';
+import PrintDraft from '../components/PrintDraft.tsx';
+import Icon from '../components/Icon.tsx';
 
 const NewRequestForm: React.FC = () => {
     const {

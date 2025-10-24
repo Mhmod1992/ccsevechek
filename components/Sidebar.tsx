@@ -1,7 +1,7 @@
 import React from 'react';
-import { useAppContext } from '../context/AppContext';
-import { Page } from '../types';
-import Icon from './Icon';
+import { useAppContext } from '../context/AppContext.tsx';
+import { Page } from '../types.ts';
+import Icon from './Icon.tsx';
 
 const Sidebar: React.FC = () => {
   const { page, setPage, settings, setSettingsPage, authUser, logout } = useAppContext();

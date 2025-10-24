@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { Settings as SettingsType, SettingsPage, CustomFindingCategory } from '../types';
-import Icon from '../components/Icon';
+import { useAppContext } from '../context/AppContext.tsx';
+import { Settings as SettingsType, SettingsPage, CustomFindingCategory } from '../types.ts';
+import Icon from '../components/Icon.tsx';
 import { v4 as uuidv4 } from 'uuid';
-import Modal from '../components/Modal';
+import Modal from '../components/Modal.tsx';
 
 // Import sub-pages
-import CarsManagement from './CarsManagement';
-import InspectionsManagement from './InspectionsManagement';
-import BrokersManagement from './BrokersManagement';
-import EmployeesManagement from './EmployeesManagement';
-import FindingsManagement from './FindingsManagement';
-import ReportSettings from './ReportSettings';
+import CarsManagement from './CarsManagement.tsx';
+import InspectionsManagement from './InspectionsManagement.tsx';
+import BrokersManagement from './BrokersManagement.tsx';
+import EmployeesManagement from './EmployeesManagement.tsx';
+import FindingsManagement from './FindingsManagement.tsx';
+import ReportSettings from './ReportSettings.tsx';
 
 // Component for General Settings
 const GeneralSettings: React.FC = () => {

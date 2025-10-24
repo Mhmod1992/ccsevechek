@@ -13,7 +13,7 @@ import {
   CustomFindingCategory,
   PredefinedFinding,
   ReportBlock,
-} from './types';
+} from './types.ts';
 
 export const initialClients: Client[] = [
     { id: 'client-1', name: '*', phone: '0505200833' },

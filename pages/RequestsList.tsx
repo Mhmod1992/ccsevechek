@@ -1,8 +1,8 @@
 
 import React, { useState, useMemo } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { RequestStatus, Employee } from '../types';
-import Icon from '../components/Icon';
+import { useAppContext } from '../context/AppContext.tsx';
+import { RequestStatus, Employee } from '../types.ts';
+import Icon from '../components/Icon.tsx';
 
 const RequestsList: React.FC = () => {
     const { requests, clients, cars, carMakes, carModels, employees, setPage, setSelectedRequestId, authUser } = useAppContext();

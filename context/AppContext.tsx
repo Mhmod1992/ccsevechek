@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { Page, SettingsPage, Client, CarMake, CarModel, Car, InspectionType, WorkshopRequest, Employee, Broker, Settings, CustomFindingCategory, PredefinedFinding, DataFieldKey, DataGridField, Notification } from '../types';
-import { initialClients, initialCarMakes, initialCarModels, initialCars, initialInspectionTypes, initialRequests, initialEmployees, initialBrokers, initialSettings, initialCustomFindingCategories, initialPredefinedFindings } from '../constants';
-import useLocalStorage from '../hooks/useLocalStorage';
+import { Page, SettingsPage, Client, CarMake, CarModel, Car, InspectionType, WorkshopRequest, Employee, Broker, Settings, CustomFindingCategory, PredefinedFinding, DataFieldKey, DataGridField, Notification } from '../types.ts';
+import { initialClients, initialCarMakes, initialCarModels, initialCars, initialInspectionTypes, initialRequests, initialEmployees, initialBrokers, initialSettings, initialCustomFindingCategories, initialPredefinedFindings } from '../constants.ts';
+import useLocalStorage from '../hooks/useLocalStorage.ts';
 import { v4 as uuidv4 } from 'uuid';
 
 // A deep merge utility to ensure settings from localStorage are hydrated with new defaults

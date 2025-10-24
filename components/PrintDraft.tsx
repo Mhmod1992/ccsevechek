@@ -1,7 +1,7 @@
 
 import React from 'react';
 // Fix: Removed unused 'InspectionResult' which was not defined in types.
-import { WorkshopRequest, Client, Car, CarMake, CarModel, InspectionType, CustomFindingCategory } from '../types';
+import { WorkshopRequest, Client, Car, CarMake, CarModel, InspectionType, CustomFindingCategory } from '../types.ts';
 
 interface PrintDraftProps {
   request: WorkshopRequest;

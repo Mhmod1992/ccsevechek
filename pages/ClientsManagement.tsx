@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { Client } from '../types';
+import { useAppContext } from '../context/AppContext.tsx';
+import { Client } from '../types.ts';
 import { v4 as uuidv4 } from 'uuid';
-import Modal from '../components/Modal';
-import Icon from '../components/Icon';
+import Modal from '../components/Modal.tsx';
+import Icon from '../components/Icon.tsx';
 
 const ClientsManagement: React.FC = () => {
     const { clients, setClients, addClient, showConfirmModal, addNotification } = useAppContext();

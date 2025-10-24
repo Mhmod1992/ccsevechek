@@ -1,17 +1,17 @@
 import React from 'react';
-import { useAppContext } from './context/AppContext';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import Icon from './components/Icon';
-import ConfirmModal from './components/ConfirmModal';
-import NotificationContainer from './components/NotificationContainer';
-import Dashboard from './pages/Dashboard';
-import RequestsList from './pages/RequestsList';
-import NewRequestForm from './pages/NewRequestForm';
-import ClientsManagement from './pages/ClientsManagement';
-import Settings from './pages/Settings';
-import FillRequestForm from './pages/FillRequestForm';
-import PrintReportPage from './pages/PrintReportPage';
+import { useAppContext } from './context/AppContext.tsx';
+import Sidebar from './components/Sidebar.tsx';
+import Header from './components/Header.tsx';
+import Icon from './components/Icon.tsx';
+import ConfirmModal from './components/ConfirmModal.tsx';
+import NotificationContainer from './components/NotificationContainer.tsx';
+import Dashboard from './pages/Dashboard.tsx';
+import RequestsList from './pages/RequestsList.tsx';
+import NewRequestForm from './pages/NewRequestForm.tsx';
+import ClientsManagement from './pages/ClientsManagement.tsx';
+import Settings from './pages/Settings.tsx';
+import FillRequestForm from './pages/FillRequestForm.tsx';
+import PrintReportPage from './pages/PrintReportPage.tsx';
 
 const App: React.FC = () => {
   const { page, authUser, setPage, requests, confirmModal, hideConfirmModal } = useAppContext();

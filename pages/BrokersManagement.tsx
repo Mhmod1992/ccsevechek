@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { Broker } from '../types';
+import { useAppContext } from '../context/AppContext.tsx';
+import { Broker } from '../types.ts';
 import { v4 as uuidv4 } from 'uuid';
-import Modal from '../components/Modal';
-import Icon from '../components/Icon';
+import Modal from '../components/Modal.tsx';
+import Icon from '../components/Icon.tsx';
 
 const BrokersManagement: React.FC = () => {
     const { brokers, setBrokers, showConfirmModal, addNotification } = useAppContext();

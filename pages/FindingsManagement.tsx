@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { PredefinedFinding } from '../types';
+import { useAppContext } from '../context/AppContext.tsx';
+import { PredefinedFinding } from '../types.ts';
 import { v4 as uuidv4 } from 'uuid';
-import Modal from '../components/Modal';
-import Icon from '../components/Icon';
+import Modal from '../components/Modal.tsx';
+import Icon from '../components/Icon.tsx';
 
 interface FindingsManagementProps {
     categoryId: string;
@@ -150,12 +150,15 @@ const FindingsManagement: React.FC<FindingsManagementProps> = ({ categoryId, cat
                             {currentFinding.referenceImage && (
                                 <div className="relative">
                                     <img src={currentFinding.referenceImage} alt="preview" className="h-12 w-12 object-cover rounded border"/>
-                                    <button onClick={removeImage} className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full p-0 h-4 w-4 flex items-center justify-center text-xs">&times;</button>
+                                    {/* Fix: Complete the button component which was cut off in the original file. */}
+                                    <button onClick={removeImage} className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">&times;</button>
                                 </div>
                             )}
                         </div>
                     </div>
-                    <div className="flex justify-end pt-4"><button onClick={handleSave} className="bg-green-600 text-white px-4 py-2 rounded-md">حفظ</button></div>
+                    <div className="flex justify-end pt-4">
+                        <button onClick={handleSave} className="bg-green-600 text-white px-4 py-2 rounded-md">حفظ</button>
+                    </div>
                 </div>
             </Modal>
         </div>

@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { Employee } from '../types';
+import { useAppContext } from '../context/AppContext.tsx';
+import { Employee } from '../types.ts';
 import { v4 as uuidv4 } from 'uuid';
-import Modal from '../components/Modal';
-import Icon from '../components/Icon';
+import Modal from '../components/Modal.tsx';
+import Icon from '../components/Icon.tsx';
 
 const EmployeesManagement: React.FC = () => {
     const { employees, setEmployees, authUser, showConfirmModal, addNotification } = useAppContext();

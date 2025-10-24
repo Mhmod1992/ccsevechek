@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { WorkshopRequest, RequestStatus, StructuredFinding, PredefinedFinding, Note } from '../types';
+import { useAppContext } from '../context/AppContext.tsx';
+import { WorkshopRequest, RequestStatus, StructuredFinding, PredefinedFinding, Note } from '../types.ts';
 import { v4 as uuidv4 } from 'uuid';
-import PrintDraft from '../components/PrintDraft';
-import Icon from '../components/Icon';
-import Modal from '../components/Modal';
+import PrintDraft from '../components/PrintDraft.tsx';
+import Icon from '../components/Icon.tsx';
+import Modal from '../components/Modal.tsx';
 
 const FillRequestForm: React.FC = () => {
     const { 
