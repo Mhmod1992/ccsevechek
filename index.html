@@ -2,7 +2,6 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>نظام إدارة ورشة السيارات</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -146,10 +145,17 @@
   }
 }
 </script>
+<!-- Add Babel to transpile JSX on the fly for static hosting -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
   <body>
     <div id="root"></div>
     <div id="modal-root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- 
+      - Changed script type to "text/babel" for Babel transpilation.
+      - Added "data-type='module'" so babel treats this as an ES module.
+      - Changed src to a relative path "./index.tsx" to work on GitHub Pages.
+    -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
