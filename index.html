@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نظام إدارة ورشة السيارات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Cairo', sans-serif;
+        background-color: #f1f5f9; /* slate-100 */
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+
+        body {
+            background-color: white !important;
+        }
+        
+        .py-8 {
+            padding: 0 !important;
+        }
+
+        .print-area {
+          display: block !important;
+          box-shadow: none !important;
+          border: none !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          width: auto !important;
+          min-height: auto !important;
+        }
+
+        @page {
+          size: A4;
+          margin: var(--page-margin-top, 20mm) var(--page-margin-right, 20mm) var(--page-margin-bottom, 20mm) var(--page-margin-left, 20mm);
+        }
+        body {
+            counter-reset: page;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .page-footer-placeholder {
+            display: block !important;
+            position: fixed;
+            bottom: 10mm;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        .page-footer-number::after {
+            counter-increment: page;
+            content: "صفحة " counter(page);
+            font-size: 12px;
+            color: #555;
+        }
+        .page-break-element {
+            page-break-before: always;
+            height: 0;
+            display: block;
+            visibility: hidden;
+        }
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+      .animate-scale-in {
+        animation: scaleIn 0.2s ease-out forwards;
+      }
+      /* Toggle Switch CSS */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      input:checked + .slider {
+        background-color: #2563eb; /* Tailwind blue-600 */
+      }
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2563eb;
+      }
+      input:checked + .slider:before {
+        -webkit-transform: translateX(22px);
+        -ms-transform: translateX(22px);
+        transform: translateX(22px);
+      }
+      .slider.round {
+        border-radius: 28px;
+      }
+      .slider.round:before {
+        border-radius: 50%;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <div id="modal-root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

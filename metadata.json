@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Car Workshop Management System جيت هوب",
+  "description": "A comprehensive web application for managing car workshop operations, including requests, clients, cars, inspections, brokers, employees, and reports. All data is stored locally in your browser.",
+  "requestFramePermissions": []
+}
